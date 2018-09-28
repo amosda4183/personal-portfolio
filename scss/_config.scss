@@ -1,5 +1,5 @@
-$primary-color: #000;
-$secondary-color: #5680e9;
+$primary-color: #333;
+$secondary-color: hsl(223, 77%, 63%);
 $light-purple: #8860d0;
 $light-blue: #5ab9ea;
 $grey: #282828;
@@ -8,11 +8,22 @@ $home-image: url(../img/background.jpg);
 $background-opacity: 0.8;
 
 
+//Set Text color- black for light background, white for dark backgrounds
+@function set-text-color($color){
+  @if(lightness($color) > 40) {
+    @return #000;
+  }
+  @else {
+    @return #fff;
+  }
+}
+
 //Repeatable CSS transition. Works like a function
 @mixin easeOut {
   transition: all 0.5s ease-out;
 }
 
+//Show background image and style to cover the full page.
 @mixin background{
   @if $show-home-image {
     &#bg-img{
@@ -31,5 +42,30 @@ $background-opacity: 0.8;
         z-index: -1;
       }
     }
+  }
+}
+
+//Media query mixins
+@mixin mediaSm{
+  @media screen and (max-width: 500px){
+    @content;
+  }
+}
+
+@mixin mediaMd{
+  @media screen and (max-width: 768px){
+    @content;
+  }
+}
+
+@mixin mediaLg{
+  @media screen and (min-width: 769px) and (max-width: 1170px){
+    @content;
+  }
+}
+
+@mixin mediaXl{
+  @media screen and (min-width: 1171px){
+    @content;
   }
 }
