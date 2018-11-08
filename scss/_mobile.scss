@@ -1,11 +1,14 @@
 //Wide screens -- 1171px and above
 @include mediaXl {
-
-
+  .projects {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 //Desktops and laptops -- 769px to 1170 px
 @include mediaLg {
-  
+  .projects {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 //Tablets and small laptops -- 768px to 501px
 @include mediaMd {
@@ -62,10 +65,18 @@
     //One column on small screens
     grid-template-columns: 1fr; 
   }
+
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 //Mobile phones -- 500px and smaller
 @include mediaSm {
   main#home h1{
     margin-top:10vh;
+  }
+
+  .projects {
+    grid-template-columns: 1fr;
   }
 }
