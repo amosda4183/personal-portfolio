@@ -39,7 +39,7 @@
   .menu-nav {
     margin: 0;
     padding: 0;
-    background: #404040;
+    background: rgba(51, 51, 51, 0.8);
     list-style: none;
     transform: translate3d(0, -100%, 0);
     transition: all 0.5s ease-out; }
@@ -48,7 +48,7 @@
   .menu-branding {
     margin: 0;
     padding: 0;
-    background: #537ee9;
+    background: rgba(88, 129, 233, 0.8);
     list-style: none;
     transform: translate3d(0, 100%, 0);
     transition: all 0.5s ease-out; }
@@ -163,8 +163,8 @@ main {
 .about-info {
   display: grid;
   grid-gap: 30px;
-  grid-template-areas: 'bioimage bio bio' 'job1 job2 job3';
-  grid-template-columns: repeat(3, 1fr); }
+  grid-template-areas: 'bioimage bio bio' 'job1 job2 job2';
+  grid-template-columns: repeat(2, 1fr); }
   .about-info .bio-image {
     grid-area: bioimage;
     margin: auto;
@@ -186,12 +186,13 @@ main {
 
 .projects {
   display: grid;
-  grid-gap: 0.7rem;
+  grid-gap: 2.5rem;
   grid-template-columns: repeat(3, 1fr); }
   .projects img {
     width: 100%;
     border: 3px #FFF solid;
-    display: block; }
+    display: block;
+    overflow: hidden; }
   .projects .item {
     position: relative; }
     .projects .item .img-overlay {
@@ -208,11 +209,6 @@ main {
       transform: translate(0%, 0%);
       cursor: pointer;
       transition: all 0.5s ease-out; }
-      .projects .item .img-overlay .img-overlay-btn {
-        position: absolute;
-        top: 35%;
-        width: 100%;
-        text-align: center; }
     .projects .item:hover .img-overlay {
       bottom: 0;
       height: 100%; }
@@ -237,8 +233,10 @@ main {
 
 .btn, .btn-dark, .btn-light {
   display: block;
-  padding: 0.5rem 0 0 0.5rem;
-  border: 0; }
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  margin-top: 0.5rem;
+  border: 1.5px solid white;
+  text-align: center; }
   .btn:hover, .btn-dark:hover, .btn-light:hover {
     background: #5881e9;
     color: #000; }
