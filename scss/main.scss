@@ -74,8 +74,12 @@ main {
     h1 {
       margin-top: 20vh;
     }
-    h1,h2,h3, .icons{
-      text-align:center;
+
+    h1,
+    h2,
+    h3,
+    .icons {
+      text-align: center;
     }
   }
 }
@@ -132,33 +136,34 @@ main {
   img {
     width: 100%;
     border: 3px #FFF solid;
-    display:block;
-    overflow:hidden;
+    display: block;
+    overflow: hidden;
   }
 
-  .item{ //Animate image overlay from top 
-    position:relative;
+  .item {
+    //Animate image overlay from top 
+    position: relative;
 
-    .img-overlay{
-      background:$primary-color;
-      opacity:0.9;
+    .img-overlay {
+      background: $primary-color;
+      opacity: 0.9;
       position: absolute;
       bottom: 100%;
-      top:0;
-      left:0;
-      right:0;
-      width:100%;
-      overflow:hidden;
-      height:0;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      overflow: hidden;
+      height: 0;
       transform: translate(0%, 0%);
-      cursor:pointer;
+      cursor: pointer;
       @include easeOut;
     }
 
     &:hover {
-      .img-overlay{
-        bottom:0;
-        height:100%;
+      .img-overlay {
+        bottom: 0;
+        height: 100%;
       }
     }
   }
@@ -166,20 +171,21 @@ main {
 
 //Contact Page
 .boxes {
-  display: grid;
-  grid-gap: 0.7rem;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
   margin-top: 1rem;
 
   div {
     font-size: 2rem;
     border: 3px #fff solid;
-    padding: 1rem 2rem;
-    margin-bottom: 2rem;
+    padding: 1.5rem 2.5rem;
+    margin-bottom: 3rem;
     @include easeOut;
 
     &:hover {
-      padding: 0.25rem 1rem;
+      padding: 0.5rem 1.5rem;
       background: $secondary-color;
       color: set-text-color($secondary-color);
 
@@ -194,7 +200,7 @@ main {
 .btn {
   display: block;
   padding: 0.5rem 0.5rem 0.5rem 0.5rem;
-  margin-top:0.5rem;
+  margin-top: 0.5rem;
   border: 1.5px solid white;
   text-align: center;
 
