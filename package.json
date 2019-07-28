@@ -1,7 +1,7 @@
 {
   "name": "personal-portfolio",
   "version": "1.0.0",
-  "description": "Respoonsive Portfolio Site",
+  "description": "Responsive Portfolio Site",
   "main": "index.js",
   "homepages": "https://amosda4183.github.io/personal-portfolio",
   "scripts": {
