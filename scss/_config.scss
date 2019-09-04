@@ -4,17 +4,14 @@ $light-purple: #8860d0;
 $light-blue: #5ab9ea;
 $grey: #282828;
 $show-home-image: true;
-$home-image: url(../img/background.jpg);
+$home-image: url(../img/pc-background.png);
 $background-opacity: 0.8;
-
 
 //Set Text color - black for light background, white for dark backgrounds
 @function set-text-color($color) {
-  @if(lightness($color) > 40) {
+  @if (lightness($color) > 40) {
     @return #000;
-  }
-
-  @else {
+  } @else {
     @return #fff;
   }
 }
